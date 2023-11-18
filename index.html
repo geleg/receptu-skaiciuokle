@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receptų skaičiuoklė</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <div id="mainContainer">
+        <div class="blokai blokas-virsutinis" id="blokas-virsutinis">
+            <div>
+                <p class="blokoAntraste">Pasirinkite receptą:</p>
+            </div>
+            <div id="patiekaluSarasas">
+                <div id="pirmasPatiekalas" class="patiekalas" onclick="receptoPasirinkimas(1)">
+                    <div class="piesinukas"><img src="images/img1.png" alt="piesinukas"></div>
+                    <div class="patiekaloPavadinimas">
+                        <p>Vištiena su salotom</p>
+                    </div>
+                    <div class="patiekaloAprasymas">
+                        <p>Amet et at aliquam duis ut morbi turpis. Quis cursus tincidunt risus purus faucibus elit ut.
+                            Pellentesque montes.</p>
+                    </div>
+                    <div class="var1 varnele varnele-hide" id="var1"><img src="images/varnele.png" alt="varnele"></div>
+                </div>
+                <div id="antrasPatiekalas" class="patiekalas" onclick="receptoPasirinkimas(2)">
+                    <div class="piesinukas"><img src="images/img2.png" alt="piesinukas"></div>
+                    <div class="patiekaloPavadinimas">
+                        <p>Tortas su mėlynėm</p>
+                    </div>
+                    <div class="patiekaloAprasymas">
+                        <p>Amet et at aliquam duis ut morbi turpis. Quis cursus tincidunt risus purus faucibus elit ut.
+                            Pellentesque montes.</p>
+                    </div>
+                    <div class="var2 varnele varnele-hide" id="var2"><img src="images/varnele.png" alt="varnele"></div>
+                </div>
+                <div id="treciasPatiekalas" class="patiekalas" onclick="receptoPasirinkimas(3)">
+                    <div class="piesinukas"><img src="images/img3.png" alt="piesinukas"></div>
+                    <div class="patiekaloPavadinimas">
+                        <p>Makaronai su mėsa</p>
+                    </div>
+                    <div class="patiekaloAprasymas">
+                        <p>Amet et at aliquam duis ut morbi turpis. Quis cursus tincidunt risus purus faucibus elit ut.
+                            Pellentesque montes.</p>
+                    </div>
+                    <div class="var3 varnele varnele-hide" id="var3"><img src="images/varnele.png" alt="varnele"></div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="blokai" id="blokas-vidurinis">
+            <div>
+                <p class="blokoAntraste">Kiek porcijų gaminsite?</p>
+            </div>
+            <div id="output"></div>
+            <div class="slidecontainer">
+                <input class="custom-range" type="range" min="1" max="20" value="1" step="1" class="slider" id="myRange" onclick="calculations()">
+            </div>
+
+        </div>
+
+
+        <div class="blokai" id="blokas-apatinis">
+            <div>
+                <p class="blokoAntraste">Jums reikės šių ingredientų, tokiais kiekiais:</p>
+            </div>
+            <div class="rezultatas"></div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
