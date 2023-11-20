@@ -60,6 +60,9 @@ output.innerHTML = (`${slider.value} porcijos (-ų)`);
 
 slider.oninput = function () {
     output.innerHTML = (`${this.value} porcijos (-ų)`);
+    if (var1.style.display === "block") {receptoPasirinkimas(1)}
+    else if (var2.style.display === "block") {receptoPasirinkimas(2)}
+    else if (var3.style.display === "block") {receptoPasirinkimas(3)}
 
 
 }
@@ -100,12 +103,5 @@ function receptoPasirinkimas(number) {
             `<p>${masyvas.produktai[i]}: <span class="ingredintukiekiai">${masyvas.kiekis[i] * slider.value}</span> 
             <span class="ingredintukiekiai">${masyvas.vienetas[i]}</span></p>`;
     }
-}
-
-
-function calculations() {
-    if (var1.style.display === "block") {receptoPasirinkimas(1)}
-   else if (var2.style.display === "block") {receptoPasirinkimas(2)}
-   else if (var3.style.display === "block") {receptoPasirinkimas(3)}
 }
 
